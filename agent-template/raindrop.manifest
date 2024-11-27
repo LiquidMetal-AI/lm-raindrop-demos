@@ -1,0 +1,32 @@
+application "agent-template" {
+
+  // You need to set all the required API keys using the CLI
+  // raindrop build env set agent-template:env:<API_KEY_NAME> <API KEY>
+
+  // groq api key
+  env "GROQ_API_KEY" {
+    secret = true
+  }
+
+  // weather API
+  env "WEATHER_API_KEY" {
+    secret = true
+  }
+
+  // news API
+  env "NEWS_API_KEY" {
+    secret = true
+  }
+
+
+  // agent service
+  service "agent" {
+    visibility = "public"
+    domain {
+
+      // this is the domain to query your agent update the ID with your org ID from liquidmetal.ai
+      fqdn = "agent.01jdb0jg3qt9jaygj5nj8g0rzb.lmapp.run"
+    }
+  }
+
+}
