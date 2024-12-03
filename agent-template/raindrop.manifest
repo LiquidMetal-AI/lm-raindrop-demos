@@ -25,7 +25,7 @@ application "agent-template" {
     domain {
 
       // this is the domain to query your agent update the ID with your org ID from liquidmetal.ai
-      fqdn = "agent.01jdb0jg3qt9jaygj5nj8g0rzb.lmapp.run"
+      fqdn = "agent.<YOUR-ORG-ID>.lmapp.run"
     }
   }
 
