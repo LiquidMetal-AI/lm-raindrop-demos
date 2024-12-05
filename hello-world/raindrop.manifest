@@ -1,0 +1,12 @@
+application "hello-world" {
+
+  // create a service to always return hello world
+  service "hello-world-service" {
+    visibility = "public"
+    domain {
+
+      // replace <YOUR ORG ID> with your org id which you can get from the raindrop dashboard at liquidmetal.run
+      fqdn = "hello-world.<YOUR ORG ID>.lmapp.run"
+    }
+  }
+}
