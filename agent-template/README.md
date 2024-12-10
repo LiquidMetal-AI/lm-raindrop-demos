@@ -7,14 +7,14 @@ A template for creating and deploying AI agents using the Raindrop platform.
 - A Raindrop account (Sign up at [Raindrop website](https://liquidmetal.ai/build))
 - Raindrop CLI installed - Learn more about installing the CLI in the [documentation](https://docs.liquidmetal.ai/reference/getting-started/)
 - Git
-- API keys for [Open Weather](https://openweathermap.org/api), [News API](https://newsapi.org/), and [Groq](https://openweathermap.org/api).
+- API keys for [Open Weather](https://openweathermap.org/api), [News API](https://newsapi.org/), and [Groq](https://groq.com/).
 
 ## Getting Started
 
 1. Clone this repository and navigate to the project directory:
    ```shell
    git clone git@github.com:LiquidMetal-AI/liquidmetal-demos.git
-   cd agent-template
+   cd liquidmetal-demos/agent-template
    ```
 
 2. Configure your project:

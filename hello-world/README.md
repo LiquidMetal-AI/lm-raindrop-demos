@@ -13,7 +13,7 @@ A simple Hello World application demonstrating basic deployment using the Raindr
 1. Clone this repository and navigate to the project directory:
    ```shell
    git clone git@github.com:LiquidMetal-AI/liquidmetal-demos.git
-   cd hello-world
+   cd liquidmetal-demos/hello-world
    ```
 
 2. Configure your project:
