@@ -1,0 +1,23 @@
+{
+  "name": "hans-meditatively",
+  "version": "1.0.0",
+  "description": "LiquidMetal AI app to generate haikus",
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "eslint . --max-warnings=0",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4",
+    "shx": "^0.3.3",
+    "ts-node": "^10",
+    "typescript-eslint": "^7.17.0",
+    "typescript": "^5.0.4",
+    "vitest": "^2.0.2"
+  },
+  "dependencies": {
+    "@liquidmetal-ai/raindrop-framework": "^0.0.1"
+  }
+}
