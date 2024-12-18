@@ -15,6 +15,7 @@ A template for creating and deploying AI agents using the Raindrop platform.
    ```shell
    git clone git@github.com:LiquidMetal-AI/liquidmetal-demos.git
    cd liquidmetal-demos/agent-template
+   npm install
    ```
 
 2. Configure your project:
@@ -28,6 +29,10 @@ A template for creating and deploying AI agents using the Raindrop platform.
    ```shell
    raindrop build branch
    raindrop build deploy
+   raindrop build env set agent-template:env:GROQ_API_KEY <your-groq-api-key>
+   raindrop build env set agent-template:env:NEWS_API_KEY <your-news-api-key>
+   raindrop build env set agent-template:env:WEATHER_API_KEY <your-openweather-api-key>
+   raindrop build start
    ```
 
 7. Send a request to your agent using `cURL`
