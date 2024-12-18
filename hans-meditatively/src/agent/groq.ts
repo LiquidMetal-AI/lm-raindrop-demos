@@ -8,7 +8,9 @@ export type HaikuRequest = {
 };
 
 export class Groq {
-  constructor(private params: GroqParams) {}
+  constructor(private params: GroqParams) {
+    console.log({ msg: "initializing groq", params });
+  }
 
   async haiku({ about, twist }: HaikuRequest): Promise<{ haiku: string }> {
     const reasoningResponse = await fetch(

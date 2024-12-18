@@ -9,7 +9,7 @@ application "hans-meditatively" {
     visibility = "public"
     domain {
       // this is the domain to query your agent update the ID with your org ID from liquidmetal.ai
-      fqdn = "hans-meditatively.01je97w7058vq0e6mk8897nqbt.lmapp.run"
+      fqdn = "hans-meditatively-7.01je97w7058vq0e6mk8897nqbt.lmapp.run"
     }
   }
 }

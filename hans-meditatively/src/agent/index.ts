@@ -3,6 +3,11 @@ import { Env } from "./raindrop.gen";
 import { Groq } from "./groq";
 
 export default class extends services.Service<Env> {
+  constructor(context: ExecutionContext, env: Env) {
+    super(context, env);
+    this.env = env;
+  }
+
   async fetch(request: Request): Promise<Response> {
     const groq = new Groq({
       apiKey: this.env.GROQ_API_KEY,
