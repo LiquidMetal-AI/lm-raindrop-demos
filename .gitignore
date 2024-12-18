@@ -41,4 +41,7 @@ out/
 # Misc
 .DS_Store
 *.pem
-.vercel 
+.vercel
+
+# Raindrop
+.raindrop/
