@@ -1,0 +1,7 @@
+application "git-haiku-demo" {
+  # MCP service to expose git-haiku tool to AI models
+  mcp_service "git-haiku-mcp" {
+    visibility = "protected"
+    authorization_server = "https://authkit.liquidmetal.run"
+  }
+}
