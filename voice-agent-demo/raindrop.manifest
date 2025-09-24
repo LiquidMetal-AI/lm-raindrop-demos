@@ -1,0 +1,11 @@
+application "voice-agent-demo" {
+  # Main service for voice processing pipeline
+  service "voice-processor" {
+    visibility = "public"  # Public API endpoint for voice processing
+  }
+
+  # Secret for Hume AI API authentication
+  env "HUME_API_KEY" {
+    secret = true
+  }
+}
