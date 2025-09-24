@@ -75,15 +75,15 @@ This script will:
 
 ## Architecture
 
-The service is built as a stateless, serverless function running on LiquidMetal's V8 runtime, leveraging:
-- `whisper-large-v3` for speech-to-text transcription
-- `llama-3.3-70b` for natural language processing
-- **Hume AI** for emotion analysis via REST API calls
+The service is built as a stateless, serverless function running on LiquidMetal's Raindrop Platform, leveraging:
+- `whisper-large-v3` for speech-to-text transcription from Sambanova 
+- `llama-3.3-70b` for natural language processing from SambaNova 
+- **Hume AI** for text-to-speech.
 
 ## Tech Stack
 
 - LiquidMetal serverless platform
 - SambaNova models via Raindrop platform
-- Direct REST API integration with Hume (no SDK dependencies)
+- Direct REST API integration with Hume
 - Batch processing (no streaming)
 - Single public service endpoint
