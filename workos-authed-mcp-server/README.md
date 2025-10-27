@@ -9,6 +9,37 @@ This demo implements a protected MCP server with WorkOS authentication, exposing
 - **Addition Tool** - Adds two numbers with notification support
 - **Greeting Resource** - Dynamic greeting generator using URI templates
 
+## Quick Start
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/liquidmetal-ai/liquidmetal-demos.git
+   ```
+
+2. Navigate to this directory:
+   ```bash
+   cd liquidmetal-demos/workos-authed-mcp-server
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Build and deploy:
+   ```bash
+   raindrop build deploy --start
+   ```
+
+5. Get your deployment URL:
+   ```bash
+   raindrop build find
+   ```
+
+6. Add `https://` prefix and `/mcp` suffix to the URL from step 5
+
+7. Configure the URL in your MCP client
+
 ## Authentication
 
 The MCP server is configured with `visibility = "protected"` in `raindrop.manifest`, enabling OAuth authentication via WorkOS AuthKit. Users must authenticate before accessing the server's tools and resources.
