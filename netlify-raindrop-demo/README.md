@@ -30,7 +30,7 @@ Chat with an AI agent (Claude via Netlify AI Gateway) that remembers your conver
 
 ### Option 1: Deploy to Netlify (Recommended)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/fokkedekker/temp-netlify-integration-testing)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LiquidMetal-AI/lm-raindrop-demos)
 
 1. Click the "Deploy to Netlify" button above
 2. Connect your GitHub account and create a new repository
@@ -56,8 +56,8 @@ Chat with an AI agent (Claude via Netlify AI Gateway) that remembers your conver
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/fokkedekker/temp-netlify-integration-testing.git
-cd temp-netlify-integration-testing
+git clone https://github.com/LiquidMetal-AI/lm-raindrop-demos.git
+cd lm-raindrop-demos/netlify-raindrop-demo
 ```
 
 2. Install dependencies:
