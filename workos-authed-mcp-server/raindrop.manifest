@@ -1,0 +1,14 @@
+application "workos-authed-mcp-server" {
+
+    mcp_service "mcp" {
+
+        # Adding visibility = protected enables workos oauth for your MCP server
+        visibility = "protected"
+
+        # The liquidmetal authkit server let you log in with your raindrop account
+        authorization_server = "https://authkit.liquidmetal.run"
+
+        # Alternatively you can add your own authkit URL directly.
+        # You can learn more about authkit in the WorkOS documentation https://workos.com/docs/authkit/vanilla/nodejs/3-handle-the-user-session/save-the-encrypted-session
+    }
+}
