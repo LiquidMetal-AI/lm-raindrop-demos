@@ -146,4 +146,4 @@ RAINDROP_APPLICATION_VERSION  # Version identifier
 - [Raindrop Documentation](https://docs.liquidmetal.ai)
 - [Netlify Documentation](https://docs.netlify.com)
 - [Astro Documentation](https://docs.astro.build)
-- [Netlify AI Gateway](https://docs.netlify.com/platform/primitives/ai-gateway/)
+- [Netlify AI Gateway](https://docs.netlify.com/build/ai-gateway/overview/)
