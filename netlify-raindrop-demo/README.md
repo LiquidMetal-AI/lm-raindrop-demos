@@ -2,7 +2,7 @@
 
 An example application demonstrating how to build AI-powered features using [Raindrop](https://liquidmetal.ai) (by LiquidMetal) integrated with Netlify. This starter includes two complete demos showing semantic document search and AI agents with persistent memory.
 
-[Live Demo](https://astro-platform-starter.netlify.app/) | [Raindrop Documentation](https://docs.liquidmetal.ai)
+[Live Demo](https://netlify-raindrop-demo.netlify.app/) | [Raindrop Documentation](https://docs.liquidmetal.ai)
 
 ## What's Included
 
