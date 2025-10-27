@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AgentChat from './_components/AgentChat.tsx';
+---
+
+<Layout title="SmartMemory Agent">
+    <div class="py-12">
+        <div class="mb-12">
+            <h1 class="mb-3 text-5xl font-bold tracking-tight">SmartMemory Agent</h1>
+            <p class="text-gray-600 text-lg">
+                Chat with an AI agent powered by Claude (via Netlify AI Gateway) with persistent memory using Raindrop SmartMemory
+            </p>
+        </div>
+        <AgentChat client:load />
+    </div>
+</Layout>

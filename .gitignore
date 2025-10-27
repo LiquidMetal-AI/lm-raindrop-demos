@@ -45,3 +45,6 @@ out/
 
 # Raindrop
 .raindrop/
+
+# Local Netlify folder
+.netlify

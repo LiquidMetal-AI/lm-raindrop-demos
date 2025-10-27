@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Raindrop + Netlify Integration">
+    <div class="py-12">
+        <!-- Header -->
+        <div class="mb-16 max-w-4xl mx-auto text-center">
+            <h1 class="mb-4 text-5xl font-bold tracking-tight">Raindrop + Netlify Integration</h1>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Build AI-powered applications with semantic search, intelligent memory systems, and multi modal RAG—all integrated seamlessly into your Netlify workflow.
+            </p>
+        </div>
+
+        <!-- Two column layout -->
+        <div class="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+            <!-- Left column - Getting Started -->
+            <div>
+                <h2 class="text-3xl font-bold mb-8">Getting Started</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+                            1
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Add the Raindrop Integration</h3>
+                            <p class="text-gray-600 text-sm">
+                                Install the Raindrop integration from the Netlify integrations directory to your project.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+                            2
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Get Your API Key</h3>
+                            <p class="text-gray-600 text-sm">
+                                Sign up for Raindrop at <a href="https://liquidmetal.ai" class="text-primary hover:underline">liquidmetal.ai</a> and generate your API key from the dashboard.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+                            3
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Configure the Integration</h3>
+                            <p class="text-gray-600 text-sm">
+                                In your Netlify project settings, navigate to the Raindrop integration, add your API key, and click <strong>Provision Resources</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+                            4
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Install the SDK</h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                Add the Raindrop SDK to your project:
+                            </p>
+                            <pre class="bg-gray-900 text-gray-100 p-3 rounded-md text-xs overflow-x-auto"><code>npm install @liquidmetal-ai/lm-raindrop</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+                            5
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Start Building</h3>
+                            <p class="text-gray-600 text-sm mb-3">
+                                Use the Raindrop SDK in your Netlify serverless functions to add AI capabilities to your application.
+                            </p>
+                            <a href="https://docs.liquidmetal.ai/sdk/overview/" target="_blank" rel="noopener noreferrer" class="inline-block text-primary font-medium hover:underline text-sm">
+                                View SDK Documentation →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right column - What's Included & Demos -->
+            <div class="space-y-8">
+                <div class="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                    <h2 class="text-2xl font-bold mb-6">What's Included</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">SmartBucket</h3>
+                            <p class="text-gray-600 text-sm">
+                                Semantic search across documents with automatic chunking, embeddings, and vector storage.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">SmartMemory</h3>
+                            <p class="text-gray-600 text-sm">
+                                Comprehensive memory management for AI agents with working, semantic, episodic, and procedural memory.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">SmartSQL <span class="text-xs font-normal text-gray-500">(Coming Soon)</span></h3>
+                            <p class="text-gray-600 text-sm">
+                                Natural language to SQL queries with automatic schema understanding and query optimization.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Auto-provisioned Resources</h3>
+                            <p class="text-gray-600 text-sm">
+                                All environment variables and resources are automatically configured when you configure the integration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-primary/5 rounded-lg p-8 border border-primary/20">
+                    <h2 class="text-2xl font-bold mb-4">Explore the Demos</h2>
+                    <p class="text-gray-600 mb-6">
+                        See the Raindrop integration in action with live examples.
+                    </p>
+                    <div class="space-y-3">
+                        <a href="/smartbucket" class="btn w-full justify-center">SmartBucket Demo</a>
+                        <a href="/smartmemory" class="btn w-full justify-center">SmartMemory Agent</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
