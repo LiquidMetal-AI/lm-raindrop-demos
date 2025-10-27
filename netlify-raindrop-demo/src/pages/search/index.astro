@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Markdown from '../../components/Markdown.astro';
+import SearchInterface from './_components/SearchInterface.tsx';
+
+const explainer = `
+[Raindrop](https://liquidmetal.ai/docs/raindrop) provides semantic search capabilities across your documents.
+This example demonstrates **chunk search** to find relevant content within documents stored in your SmartBucket.
+
+Use the search interface below to query your documents 🔍.
+`;
+---
+
+<Layout title="Document Search">
+    <h1 class="mb-10">Document Search with Raindrop</h1>
+    <Markdown content={explainer} class="mb-12" />
+    <SearchInterface client:load />
+</Layout>

@@ -1,0 +1,28 @@
+---
+import { Marked } from 'marked';
+import markedShiki from 'marked-shiki';
+import { highlighterPromise } from '../utils/highlighter';
+
+interface Props {
+    content: string;
+    class?: string;
+}
+
+const { content, class: className } = Astro.props;
+
+const highlighter = await highlighterPromise;
+const html = await new Marked()
+    .use(
+        markedShiki({
+            highlight(code, lang, props) {
+                return highlighter.codeToHtml(code, {
+                    lang,
+                    theme: 'min-dark'
+                });
+            }
+        })
+    )
+    .parse(content);
+---
+
+<div class:list={['markdown', className]} set:html={html} />

@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SmartBucketDemo from './_components/SmartBucketDemo.tsx';
+---
+
+<Layout title="SmartBucket Demo">
+    <div class="py-12">
+        <div class="mb-12">
+            <h1 class="mb-3 text-5xl font-bold tracking-tight">SmartBucket Demo</h1>
+            <p class="text-gray-600 text-lg">
+                Upload documents and search them using semantic search powered by Raindrop
+            </p>
+        </div>
+        <SmartBucketDemo client:load />
+    </div>
+</Layout>

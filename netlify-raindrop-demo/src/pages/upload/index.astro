@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import UploadInterface from './_components/UploadInterface.tsx';
+---
+
+<Layout title="Upload Documents">
+    <div class="py-12">
+        <h1 class="mb-3 text-5xl font-bold tracking-tight">Upload Documents</h1>
+        <p class="text-gray-600 text-lg mb-12">Upload documents to your SmartBucket</p>
+        <UploadInterface client:load />
+    </div>
+</Layout>
