@@ -1,6 +1,5 @@
 import type { APIRoute } from 'astro';
 import Raindrop from '@liquidmetal-ai/lm-raindrop';
-import Anthropic from '@anthropic-ai/sdk';
 
 export const prerender = false;
 
@@ -45,12 +44,6 @@ export const POST: APIRoute = async ({ request }) => {
 
         const raindrop = new Raindrop({ apiKey: raindropApiKey });
 
-        // Use Netlify AI Gateway for Claude
-        const anthropic = new Anthropic({
-            apiKey: process.env.ANTHROPIC_API_KEY,
-            baseURL: process.env.ANTHROPIC_BASE_URL,
-        });
-
         const smartMemoryLocation = {
             smartMemory: {
                 name: smartMemoryName,
@@ -84,26 +77,19 @@ export const POST: APIRoute = async ({ request }) => {
         timings.getMemory = Date.now() - memoryStart;
 
         // Build context from last 5 messages
-        const memoryContext = memorySearch.memories
-            ?.map((m) => `[${m.at}] ${m.content}`)
-            .join('\n') || 'No previous messages found.';
+        const memories = memorySearch.memories || [];
 
-        // Call Claude via Netlify AI Gateway
+        // Generate demo response showing memory functionality
         const modelStart = Date.now();
-        const response = await anthropic.messages.create({
-            model: 'claude-sonnet-4-5-20250929',
-            max_tokens: 1024,
-            system: `You are a helpful AI assistant with access to your conversation memory. Here are relevant past memories:\n\n${memoryContext}\n\nUse this context to provide personalized responses. If the user asks about previous conversations, reference these memories.`,
-            messages: [
-                {
-                    role: 'user',
-                    content: message,
-                },
-            ],
-        });
-        timings.modelCall = Date.now() - modelStart;
+        let assistantMessage = '';
 
-        const assistantMessage = response.content[0].type === 'text' ? response.content[0].text : '';
+        if (memories.length === 0) {
+            assistantMessage = `🎭 Demo Mode: This is your first message! I'm demonstrating SmartMemory functionality without using a real LLM to prevent abuse.\n\nYour message: "${message}"\n\nTry sending more messages to see how I remember our conversation history!`;
+        } else {
+            assistantMessage = `🎭 Demo Mode: I can see our conversation history stored in SmartMemory!\n\nYou just said: "${message}"\n\n📚 Recent conversation history (${memories.length} memories):\n${memories.map((m, i) => `${i + 1}. ${m.content}`).join('\n')}\n\nThis demonstrates that SmartMemory is persisting your conversation across messages!`;
+        }
+
+        timings.modelCall = Date.now() - modelStart;
 
         // Store this interaction in memory
         const putMemoryStart = Date.now();
