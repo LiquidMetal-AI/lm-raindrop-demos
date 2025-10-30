@@ -136,44 +136,6 @@ export default function AgentChat() {
                 </div>
             </div>
 
-            {/* Performance Timings */}
-            {timings && (
-                <div className="mb-6 p-4 bg-gray-50 rounded-md border border-gray-200">
-                    <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
-                        {timings.getMemory !== undefined && (
-                            <div>
-                                <div className="text-xs text-gray-500 font-medium">Get Memory</div>
-                                <div className="text-sm font-semibold text-gray-900">{timings.getMemory}ms</div>
-                            </div>
-                        )}
-                        {timings.modelCall !== undefined && (
-                            <div>
-                                <div className="text-xs text-gray-500 font-medium">Model Call</div>
-                                <div className="text-sm font-semibold text-primary">{timings.modelCall}ms</div>
-                            </div>
-                        )}
-                        {timings.putMemory !== undefined && (
-                            <div>
-                                <div className="text-xs text-gray-500 font-medium">Put Memory</div>
-                                <div className="text-sm font-semibold text-gray-900">{timings.putMemory}ms</div>
-                            </div>
-                        )}
-                        {timings.startSession !== undefined && (
-                            <div>
-                                <div className="text-xs text-gray-500 font-medium">Start Session</div>
-                                <div className="text-sm font-semibold text-gray-900">{timings.startSession}ms</div>
-                            </div>
-                        )}
-                        {timings.total !== undefined && (
-                            <div>
-                                <div className="text-xs text-gray-500 font-medium">Total</div>
-                                <div className="text-sm font-bold text-primary">{timings.total}ms</div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            )}
-
             {/* Chat container */}
             <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
                 {/* Messages */}

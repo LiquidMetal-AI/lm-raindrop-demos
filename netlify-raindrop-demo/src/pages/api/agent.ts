@@ -108,7 +108,7 @@ export const POST: APIRoute = async ({ request }) => {
             JSON.stringify({
                 response: assistantMessage,
                 sessionId: currentSessionId,
-                memoryCount: memorySearch.memories?.length || 0,
+                memoryCount: (memorySearch.memories?.length || 0) + 1,
                 timings,
             }),
             {
