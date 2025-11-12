@@ -1,0 +1,17 @@
+{
+  "name": "smartmemory-starter",
+  "version": "1.0.0",
+  "description": "Simple starter template for Raindrop SmartMemory with persistent conversation memory",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "@liquidmetal-ai/lm-raindrop": "^0.6.42"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
