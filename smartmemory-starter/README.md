@@ -1,6 +1,6 @@
 # SmartMemory Starter
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LiquidMetal-AI/liquidmetal-demos&base=smartmemory-starter)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LiquidMetal-AI/lm-raindrop-demos&base=smartmemory-starter)
 
 Minimal starter template demonstrating persistent conversation memory using Raindrop's SmartMemory feature on Netlify.
 
@@ -8,54 +8,33 @@ Minimal starter template demonstrating persistent conversation memory using Rain
 
 SmartMemory stores conversation history across sessions, allowing AI agents to remember previous interactions. This demo creates a chat interface where the agent can access past messages.
 
-## Prerequisites
+## Quick Start
 
-- Node.js 18+
-- Netlify account
-- Raindrop integration installed on your Netlify project
+1. **Deploy to Netlify**: Click the button above to clone this template to a new Netlify project
 
-## Installation
+2. **Add Raindrop Integration**: Follow the tutorial to add the Raindrop integration to your Netlify project:
+   - [Netlify Integration Tutorial](https://docs.liquidmetal.ai/tutorials/netlify-integration/)
+   - This automatically sets all required environment variables
 
-```bash
-npm install
-```
+3. **Run Locally** (optional):
+   ```bash
+   npm install
+   netlify link              # Connect to your Netlify project
+   npm run dev               # Pulls env vars from Netlify automatically
+   ```
+
+That's it! Your SmartMemory app is ready to use.
 
 ## Environment Variables
 
-When deployed to Netlify with the Raindrop integration installed, these environment variables are **automatically set**:
+When you add the Raindrop integration to your Netlify project, these environment variables are **automatically set**:
 
 - `RAINDROP_API_KEY`
 - `RAINDROP_SMARTMEMORY_NAME`
 - `RAINDROP_APPLICATION_NAME`
 - `RAINDROP_APPLICATION_VERSION`
 
-No manual configuration needed!
-
-## Running Locally
-
-### Option 1: Pull Environment Variables from Netlify (Recommended)
-
-1. Link your local project to your Netlify site:
-```bash
-netlify link
-```
-
-2. Start the dev server (automatically pulls env vars from Netlify):
-```bash
-npm run dev
-```
-
-### Option 2: Use Local Environment Variables
-
-If you prefer to use local values or don't have a Netlify site yet:
-
-```bash
-cp .env.example .env
-# Edit .env with your credentials
-npm run dev
-```
-
-The Netlify Dev server runs at http://localhost:8888 and emulates the Netlify Functions environment.
+No manual configuration needed! The integration handles everything.
 
 ## Project Structure
 
