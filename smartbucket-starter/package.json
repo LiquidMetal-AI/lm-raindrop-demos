@@ -1,0 +1,17 @@
+{
+  "name": "smartbucket-starter",
+  "version": "1.0.0",
+  "description": "Simple starter template for Raindrop SmartBucket with document upload and semantic search",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "@liquidmetal-ai/lm-raindrop": "^0.6.42"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
