@@ -5,10 +5,10 @@ export const prerender = false;
 
 export const POST: APIRoute = async ({ request }) => {
     try {
-        const raindropApiKey = import.meta.env.RAINDROP_API_KEY || process.env.RAINDROP_API_KEY;
-        const smartMemoryName = import.meta.env.RAINDROP_SMARTMEMORY_NAME || process.env.RAINDROP_SMARTMEMORY_NAME;
-        const applicationName = import.meta.env.RAINDROP_APPLICATION_NAME || process.env.RAINDROP_APPLICATION_NAME;
-        const version = import.meta.env.RAINDROP_APPLICATION_VERSION || process.env.RAINDROP_APPLICATION_VERSION;
+        const raindropApiKey = process.env.RAINDROP_API_KEY;
+        const smartMemoryName = process.env.RAINDROP_SMARTMEMORY_NAME;
+        const applicationName = process.env.RAINDROP_APPLICATION_NAME;
+        const version = process.env.RAINDROP_APPLICATION_VERSION;
 
         if (!raindropApiKey || !smartMemoryName || !applicationName || !version) {
             return new Response(

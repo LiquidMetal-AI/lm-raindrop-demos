@@ -14,9 +14,9 @@ export const POST: APIRoute = async ({ request }) => {
             );
         }
 
-        const apiKey = import.meta.env.RAINDROP_API_KEY || process.env.RAINDROP_API_KEY;
+        const apiKey = process.env.RAINDROP_API_KEY;
         const client = new Raindrop({ apiKey });
-        const bucketToUse = bucketName || import.meta.env.RAINDROP_SMARTBUCKET_NAME || process.env.RAINDROP_SMARTBUCKET_NAME;
+        const bucketToUse = bucketName || process.env.RAINDROP_SMARTBUCKET_NAME;
 
         if (!bucketToUse) {
             return new Response(

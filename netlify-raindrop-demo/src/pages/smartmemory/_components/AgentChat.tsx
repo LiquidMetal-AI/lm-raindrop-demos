@@ -39,7 +39,6 @@ export default function AgentChat() {
 
                 const data = await response.json();
                 setSessionId(data.sessionId);
-                console.log('Session created:', data.sessionId, 'in', data.timings.startSession, 'ms');
             } catch (error) {
                 console.error('Error creating session:', error);
             } finally {
