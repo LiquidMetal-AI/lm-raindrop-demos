@@ -48,7 +48,6 @@ export default function SearchInterface() {
             }
 
             const data: SearchResponse = await response.json();
-            console.log('Search response:', data);
             setResults(data.results || []);
         } catch (err) {
             setError(err instanceof Error ? err.message : 'An error occurred');

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import UploadInterface from '../../upload/_components/UploadInterface';
-import SearchInterface from '../../search/_components/SearchInterface';
+import UploadInterface from './UploadInterface';
+import SearchInterface from './SearchInterface';
 
 export default function SmartBucketDemo() {
     const [activeTab, setActiveTab] = useState<'upload' | 'search'>('upload');

@@ -1,5 +1,4 @@
 [build]
-  base = "netlify-raindrop-demo"
   publish = "dist"
   command = "npm run build"
 
